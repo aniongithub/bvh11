@@ -18,9 +18,6 @@ target_include_directories(bvh11
 		$<INSTALL_INTERFACE:include/>
 		$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include/>)
 
-install(FILES ${HEADERS} DESTINATION ${CMAKE_INSTALL_PREFIX}/include/)
-install(TARGETS bvh11 ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
-
 option(BVH11_BUILD_DEMOS "Build demos" OFF)
 
 if(BVH11_BUILD_DEMOS)
@@ -69,7 +66,8 @@ configure_package_config_file(${CMAKE_CURRENT_LIST_DIR}/cmake/installConfig.cmak
 # Install the header files
 install(DIRECTORY include/
     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}
-    FILES_MATCHING PATTERN "*.h")
+    FILES_MATCHING PATTERN "*.h" 
+	PATTERN "*.hpp")
 
 # Install the config, configversion and custom find modules
 install(FILES
