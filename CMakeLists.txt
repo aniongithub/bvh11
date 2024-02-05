@@ -10,6 +10,9 @@ file(GLOB SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/bvh11.cpp)
 option(BUILD_SHARED_LIBS "Build shared libs" OFF)
 
 add_library(bvh11 ${SOURCES})
+
+set_target_properties(${PROJECT_NAME} PROPERTIES POSITION_INDEPENDENT_CODE ON)
+
 target_link_libraries(bvh11 
 	PRIVATE
 		Eigen3::Eigen)
