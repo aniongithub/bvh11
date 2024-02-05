@@ -1,0 +1,18 @@
+{
+	"name": "development",
+
+	"context": "..",
+
+	"dockerFile": "dev.Dockerfile",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+				"ms-vscode.cpptools",
+				"twxs.cmake",
+				"ms-vscode.cmake-tools",
+				"cweijan.vscode-typora",
+				"GitHub.copilot"
+			]
+        }
+    }
+}
