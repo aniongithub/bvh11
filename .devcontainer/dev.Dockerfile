@@ -12,7 +12,7 @@ RUN apt-get update &&\
         gdb \
         cmake
 
-WORKDIR /usr/local/src/eigen
+WORKDIR /usr/local/src
 RUN git clone https://github.com/libigl/eigen.git &&\
     cd eigen &&\
     mkdir build &&\

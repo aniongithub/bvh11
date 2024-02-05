@@ -1,8 +1,8 @@
 #ifndef BVH11_HPP_
 #define BVH11_HPP_
 
-#include <Eigen/Core>
-#include <Eigen/Geometry>
+#include <eigen3/Eigen/Core>
+#include <eigen3/Eigen/Geometry>
 #include <iostream>
 #include <list>
 #include <memory>
