@@ -4,6 +4,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 find_package(Eigen3)
 
+file(GLOB HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/include/*.hpp)
 file(GLOB SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/bvh11.cpp)
 
 option(BUILD_SHARED_LIBS "Build shared libs" OFF)
